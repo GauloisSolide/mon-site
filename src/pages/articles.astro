@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Articles">
+  <div class="articles">
+
+    <div class="header">
+      <h1 class="titre">Articles</h1>
+      <div class="triline"><div></div><div></div><div></div></div>
+    </div>
+    <p class="bientot">Les articles sont en cours de rédaction. Ils seront publiés ici au fil de l'avancement des travaux.</p>
+  </div>
+</Layout>
+
+<style>
+  .articles { padding: 2rem 0 10rem; animation: fadeUp 0.7s ease forwards; opacity: 0; transform: translateY(20px); }
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+  .header { text-align: center; margin-bottom: 4rem; }
+  .titre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--txt);
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .triline { display: flex; height: 1px; width: 100%; overflow: hidden; }
+  .triline div { flex: 1; transform: scaleX(0); transform-origin: left; }
+  .triline div:nth-child(1) { background: var(--fr-b); animation: grow 0.4s ease forwards 0.4s; }
+  .triline div:nth-child(2) { background: var(--fr-w); animation: grow 0.4s ease forwards 0.6s; }
+  .triline div:nth-child(3) { background: var(--fr-r); animation: grow 0.4s ease forwards 0.8s; }
+  @keyframes grow { to { transform: scaleX(1); } }
+
+  .article-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--dim);
+  }
+  .article-item:first-of-type { border-top: 1px solid var(--dim); }
+
+  .article-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    gap: 2rem;
+  }
+
+  .article-info { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .article-date {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--sub);
+  }
+
+  .article-titre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--txt);
+  }
+
+  .article-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--sub);
+    text-transform: uppercase;
+  }
+
+  .bientot {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(-sub);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+  .article-btn {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d8d8d4;
+    border: 1px solid var(--dim);
+    padding: 0.5rem 1.2rem;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .article-btn:hover { border-color: #d8d8d4; color: var(--txt); }
+
+  .article-desc {
+    font-size: 0.95rem;
+    color: #a0a09a;
+    line-height: 1.9;
+  }
+</style>

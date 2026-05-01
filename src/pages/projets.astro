@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Projets">
+  <div class="projets">
+
+    <div class="header">
+      <h1 class="titre">Projets</h1>
+      <div class="triline"><div></div><div></div><div></div></div>
+    </div>
+
+    <div class="projet-item">
+      <div class="projet-top">
+        <div class="projet-info">
+          <span class="projet-date">2024 — 2025</span>
+          <h2 class="projet-titre">Effet Papillon et prévision météorologique : une conversion du prévisible au chaotique</h2>
+          <span class="projet-tag">TIPE · Mathématiques & Météorologie</span>
+        </div>
+        <a href="TIPE.pdf" class="projet-btn">Télécharger l'article →</a>
+      </div>
+      <p class="projet-desc">Conduit en classe préparatoire aux grandes écoles MPSI/MP dans le cadre du TIPE — dont le thème de l'année était <em>Transition, transformation, conversion</em> —  ce projet explore la frontière entre les mathématiques théoriques et la météorologie appliquée. Le système dynamique de Lorenz y est modélisé avec injection de données réelles issues de Météo-France et Meteociel — température, humidité, pression — afin de simuler les trajectoires dans l'espace des phases et de visualiser les attracteurs chaotiques. L'intégration numérique d'Euler, implémentée en Python, permet de mettre en évidence la sensibilité extrême aux conditions initiales, comparée sur deux régimes contrastés : la stabilité météorologique de Lille et le chaos de la Tempête Ciarán à la Pointe du Raz.</p>
+    </div>
+
+  </div>
+</Layout>
+
+<style>
+  .projets { padding: 2rem 0 2rem; animation: fadeUp 0.7s ease forwards; opacity: 0; transform: translateY(20px); }
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+  .header { text-align: center; margin-bottom: 1.5rem; }
+  .titre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--txt);
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .triline { display: flex; height: 1px; width: 100%; overflow: hidden; }
+  .triline div { flex: 1; transform: scaleX(0); transform-origin: left; }
+  .triline div:nth-child(1) { background: var(--fr-b); animation: grow 0.4s ease forwards 0.4s; }
+  .triline div:nth-child(2) { background: var(--fr-w); animation: grow 0.4s ease forwards 0.6s; }
+  .triline div:nth-child(3) { background: var(--fr-r); animation: grow 0.4s ease forwards 0.8s; }
+  @keyframes grow { to { transform: scaleX(1); } }
+
+  .projet-item {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--dim);
+  }
+  .projet-item:first-of-type { border-top: 1px solid var(--dim); }
+
+  .projet-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    gap: 2rem;
+  }
+
+  .projet-info { display: flex; flex-direction: column; gap: 0.4rem; }
+
+  .projet-date {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--sub);
+  }
+
+  .projet-titre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--txt);
+  }
+
+  .projet-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--sub);
+    text-transform: uppercase;
+  }
+
+  .projet-btn {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d8d8d4;
+    border: 1px solid var(--dim);
+    padding: 0.5rem 1.2rem;
+    white-space: nowrap;
+    transition: border-color 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .projet-btn:hover { border-color: #d8d8d4; color: var(--txt); }
+
+  .projet-desc {
+    font-size: 0.95rem;
+    color: #a0a09a;
+    line-height: 1.9;
+  }
+</style>

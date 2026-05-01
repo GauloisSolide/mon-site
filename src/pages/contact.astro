@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact">
+  <div class="contact">
+
+    <div class="header">
+      <h1 class="titre">Contact</h1>
+      <div class="triline"><div></div><div></div><div></div></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="contact-intro">Étudiant-ingénieur en aéronautique et futur pilote militaire, je suis ouvert à tout échange avec des professionnels de la défense, de l'aéronautique et des sciences appliquées — qu'il s'agisse d'une opportunité, d'une collaboration ou simplement d'un dialogue.</p>
+
+        <div class="contact-links">
+          <div class="contact-link">
+            <span class="contact-label">Email</span>
+            <a href="mailto:raphael.djedai.pro@gmail.com">raphael.djedai.pro@gmail.com</a>
+          </div>
+          <div class="contact-link">
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://linkedin.com/in/raphaël-djedai" target="_blank">linkedin.com/in/raphaël-djedai</a>
+          </div>
+          <div class="contact-link">
+            <span class="contact-label">Localisation</span>
+            <span>Bidart, 64210 · France</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="form">
+          <div class="form-group">
+            <label>Nom</label>
+            <input type="text" placeholder="Votre nom" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="6" placeholder="Votre message..."></textarea>
+          </div>
+          <button type="submit" class="form-btn">Envoyer →</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</Layout>
+
+<style>
+  .contact { padding: 2rem 0 10rem; animation: fadeUp 0.7s ease forwards; opacity: 0; transform: translateY(20px); }
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+  .header { text-align: center; margin-bottom: 4rem; }
+  .titre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--txt);
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .triline { display: flex; height: 1px; width: 100%; overflow: hidden; }
+  .triline div { flex: 1; transform: scaleX(0); transform-origin: left; }
+  .triline div:nth-child(1) { background: var(--fr-b); animation: grow 0.4s ease forwards 0.4s; }
+  .triline div:nth-child(2) { background: var(--fr-w); animation: grow 0.4s ease forwards 0.6s; }
+  .triline div:nth-child(3) { background: var(--fr-r); animation: grow 0.4s ease forwards 0.8s; }
+  @keyframes grow { to { transform: scaleX(1); } }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-top: 1rem;
+  }
+
+  .contact-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: #d8d8d4;
+    line-height: 1.9;
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+
+  .contact-links { display: flex; flex-direction: column; }
+  .contact-link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--dim);
+  }
+  .contact-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sub);
+  }
+  .contact-link a, .contact-link span:last-child {
+  font-size: 0.92rem;
+  color: #eeecea;
+  transition: color 0.2s;
+}
+  .contact-link a:hover { color: var(--txt); }
+
+  .form { display: flex; flex-direction: column; gap: 1.5rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-group label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--sub);
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder {
+  color: #6b6b66;
+}
+.form-group input, .form-group textarea {
+  background: #0f0f12;
+  border: 1px solid var(--dim);
+  color: #eeecea;
+  padding: 0.8rem 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+  outline: none;
+}
+  .form-group input:focus, .form-group textarea:focus { border-color: #d8d8d4; }
+  .form-btn {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #d8d8d4;
+    border: 1px solid var(--dim);
+    padding: 0.6rem 1.5rem;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .form-btn:hover { border-color: #d8d8d4; color: var(--txt); }
+</style>

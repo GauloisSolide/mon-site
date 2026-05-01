@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Accueil">
+  <div class="hero">
+    <div class="hero-main">
+      <div class="hero-text">
+        <span class="eyebrow">Étudiant-ingénieur · France</span>
+        <h1 class="name">Raphaël<span class="last">Djedai</span></h1>
+      </div>
+      <div class="formation">
+  <img src="/rafale.png" alt="Rafale" class="plane plane-side" />
+  <img src="/f14.png" alt="F-14" class="plane plane-center" />
+  <img src="/mirage2000.png" alt="Mirage 2000" class="plane plane-side" style="margin: 0 -3rem;" />
+</div>
+    </div>
+    <div class="triline"><div></div><div></div><div></div></div>
+    <div class="bio">
+  <p>Depuis l'enfance, une certitude s'est installée — discrètement d'abord, puis avec une netteté croissante : je veux voler. Non pas voler pour fuir, mais voler parce que le ciel représente pour moi l'espace où se rejoignent l'adrénaline, le sens du devoir et quelque chose de plus profond, de plus difficile à nommer — une forme de vocation. Le cockpit d'un avion de chasse n'est pas seulement un poste de pilotage ; c'est, dans mon esprit, le lieu d'une vie pleinement assumée. Je ne saurais expliquer rationnellement d'où vient cette conviction. Elle est là, ancrée, et elle oriente chacune de mes décisions depuis des années. Avec le temps, cette vocation s'est élargie — au transport militaire, aux hélicoptères de combat — tant il est vrai que c'est le métier de pilote militaire dans son ensemble qui m'attire, dans ce qu'il a de plus exigeant et de plus noble. En 2019, à seize ans, j'obtenais mon <strong>Brevet d'Initiation Aéronautique</strong> — premier geste concret vers ce que je savais déjà être ma voie.</p>
+
+  <p>C'est cette même conviction qui m'a conduit vers l'aéronautique — non par défaut, mais par cohérence. Travailler au plus près de ce qui me fait vibrer, contribuer au développement d'un secteur que j'admire, comprendre de l'intérieur les machines que je rêve de piloter : voilà ce qui m'anime. En février 2023, j'ai choisi de rejoindre la <strong>Préparation Militaire Armée de Terre</strong> à Douai — non par obligation, mais par conviction. Apprendre à tenir sous la pression, à fonctionner en équipe dans des conditions exigeantes, à subordonner l'individuel au collectif : autant de dimensions que je considère indissociables de l'idéal que je poursuis. J'ai choisi de ne pas dissocier la passion du métier. Je veux vivre sans regret, et cela implique d'accepter l'exigence — celle qu'on s'impose à soi-même, bien avant que quiconque ne vous la demande.</p>
+
+  <p>C'est pourquoi, en parallèle du cursus ingénieur à l'<strong>ESTIA</strong>, j'ai choisi de suivre une spécialisation en <strong>mécanique du vol</strong> à l'<strong>ISAE-SUPAERO</strong> et une formation en <strong>mathématiques et physique théoriques</strong> à l'<strong>École Polytechnique</strong>. Non par goût de la surcharge, mais parce que je crois fermement qu'un ingénieur véritablement solide se construit sur des fondements théoriques rigoureux. La physique quantique, la théorie des probabilités, la théorie des distributions — ces disciplines semblent lointaines de l'aéronautique opérationnelle. Elles n'en sont pas moins, à mes yeux, constitutives de la pensée d'un ingénieur qui aspire à l'excellence plutôt qu'à la simple compétence.</p>
+
+  <p>Si le plan A — devenir <strong>pilote militaire</strong>, que ce soit dans l'<strong>Armée de l'Air et de l'Espace</strong>, la <strong>Marine Nationale</strong> ou l'<strong>Armée de Terre</strong>, aux commandes d'un chasseur, d'un appareil de transport ou d'un hélicoptère de combat — ne se réalise pas, le plan B n'est en aucun cas une consolation. C'est un objectif à part entière : celui d'un ingénieur aéronautique de haut niveau, ancré dans les enjeux de la défense nationale, avec en ligne de mire le concours <strong>IETA</strong>. Nous vivons une époque où la souveraineté technologique redevient une question existentielle pour les nations. Contribuer à la défense de mon pays — que ce soit aux commandes d'un aéronef ou dans la conception des systèmes qui les font voler — est une perspective qui me tient profondément à cœur.</p>
+
+  <p>Ce site est le reflet de ce parcours — construit avec méthode, animé par l'ambition. On y trouvera mon parcours académique, mes projets de recherche, dont mon TIPE sur la <strong>modélisation de l'attracteur chaotique de Lorenz</strong> appliquée à la prévision météorologique, et mes articles scientifiques rédigés en LaTeX. Non pas un curriculum vitae mis en page, mais la trace d'une trajectoire — pour ceux qui souhaitent comprendre qui je suis, ce que je construis, et vers où je vais.</p>
+</div>
+<div class="citation">
+<p class="citation-perso">"Je ne sais pas encore ce que je deviendrai. Mais je pressens que l'homme que je serai regardera en arrière avec la douleur sourde de celui qui a perdu quelque chose qu'il n'a jamais su nommer."</p>
+</div>
+  </div>
+</Layout>
+
+<style>
+  .hero { padding: 1rem 0 2rem; animation: fadeUp 0.7s ease forwards; opacity: 0; transform: translateY(20px); }
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+  .hero-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  .hero-text { display: flex; flex-direction: column; }
+
+  .eyebrow {
+    display: block;
+    font-size: 0.82rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--txt);
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 9vw, 8rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 0.9;
+    color: var(--txt);
+    letter-spacing: -0.02em;
+  }
+  .last { display: block; font-style: italic; color: var(--txt); margin-top: 0.7rem; }
+
+  .citation-perso {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #d8d8d4;
+  line-height: 1.9;
+  text-align: right;
+}
+
+.citation {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+.citation p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #d8d8d4;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+.citation span {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--sub);
+  text-transform: uppercase;
+}
+
+  /* FORMATION */
+  .formation {
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+.plane { height: 280px; width: auto; object-fit: contain; }
+.plane-center { height: 280px; }
+.plane-side { height: 280px; }
+
+  .triline { display: flex; height: 1px; width: 100%; margin-bottom: 2rem; overflow: hidden; }
+  .triline div { flex: 1; transform: scaleX(0); transform-origin: left; }
+  .triline div:nth-child(1) { background: var(--fr-b); animation: grow 0.4s ease forwards 0.4s; }
+  .triline div:nth-child(2) { background: var(--fr-w); animation: grow 0.4s ease forwards 0.6s; }
+  .triline div:nth-child(3) { background: var(--fr-r); animation: grow 0.4s ease forwards 0.8s; }
+  @keyframes grow { to { transform: scaleX(1); } }
+
+  .bio { display: flex; flex-direction: column; gap: 1.3rem; }
+  .bio p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #d8d8d4; line-height: 1.95; font-weight: 300; }
+  .bio p strong { color: var(--txt); font-weight: 400; }
+</style>

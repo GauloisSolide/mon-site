@@ -1,0 +1,195 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Parcours & CV">
+  <div class="parcours">
+    <div class="header">
+  <h1 class="titre">Parcours & CV</h1>
+  <div class="triline"><div></div><div></div><div></div></div>
+  <a href="/CV.pdf" download class="cv-btn">Télécharger le CV →</a>
+</div>
+
+    <div class="section-label">Formation</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">2025 — 2028</span>
+          <span class="tl-lieu">Bidart, France</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">Diplôme d'ingénieur — ESTIA</h3>
+          <p class="tl-desc">Filière généraliste — spécialisation aéronautique et défense.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">2025 — 2026</span>
+          <span class="tl-lieu">Formation à distance</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">Mécanique du vol — ISAE-SUPAERO</h3>
+          <p class="tl-desc">Modélisation de la portance et des trajectoires, équilibre propulsif, analyse énergétique, anémométrie, navigabilité des aéronefs.</p>
+<span class="gpa">GPA 4.58 / 5.0</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">2025 — 2026</span>
+          <span class="tl-lieu">Formation à distance</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">Mathématiques & Physique théoriques — École Polytechnique</h3>
+          <p class="tl-desc">Physique quantique, théorie des probabilités, théorie des distributions.</p>
+<span class="gpa">GPA 4.97 / 5.0</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">2022 — 2025</span>
+          <span class="tl-lieu">Roubaix, France</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">CPGE MPSI/MP — Lycée Saint-Rémi</h3>
+          <p class="tl-desc">Mathématiques, Physique et Sciences de l'Ingénieur. Préparation aux concours des grandes écoles d'ingénieurs françaises.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">2019</span>
+          <span class="tl-lieu">Genech, France</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">Brevet d'Initiation Aéronautique</h3>
+          <p class="tl-desc">Introduction aux fondamentaux de l'aéronautique.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Expériences</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">Jan. — Mar. 2026</span>
+          <span class="tl-lieu">Biscarrosse, France</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">Stagiaire ingénieur — DGA Essais de Missiles</h3>
+          <p class="tl-desc">Département Cibles — maintenance sur cibles BQM-167i, Banshee Whirlwind, Banshee Jet 40, Banshee Jet 80 et Snipe, essais moteurs au sol, campagnes de tir réel impliquant les missiles Aster et Meteor pour L'armée française ainsi que singapourienne, essais d'instrumentation radar Rafale en coordination avec la DGA Essais en Vol. Participation à un projet de R&D classifié Secret Défense.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-date">Fév. — Mar. 2023</span>
+          <span class="tl-lieu">Douai, France</span>
+        </div>
+        <div class="tl-right">
+          <h3 class="tl-titre">Préparation Militaire — Armée de Terre</h3>
+          <p class="tl-desc">Travail en équipe, discipline, gestion du stress, rigueur opérationnelle et état d'esprit orienté mission.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-label">Compétences</div>
+    <div class="competences">
+      <div class="comp-bloc">
+        <h4>Sciences & Ingénierie</h4>
+        <p>Aérodynamique · Mécanique du vol · Physique théorique & appliquée · Mathématiques théoriques · Calcul différentiel · Simulation numérique · Modélisation mathématique · Traitement du signal</p>
+      </div>
+      <div class="comp-bloc">
+        <h4>Outils & Langues</h4>
+        <p>LaTeX · Python · Onshape · Microsoft Office · Notions SQL · Notions HTML/CSS</p>
+        <p style="margin-top:0.8rem;">Français (natif) · Anglais (courant) · Espagnol (intermédiaire)</p>
+      </div>
+    </div>
+
+  </div>
+</Layout>
+
+<style>
+  .parcours { padding: 2rem 0 2rem; animation: fadeUp 0.7s ease forwards; opacity: 0; transform: translateY(20px); }
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+  .header { text-align: center; margin-bottom: 1.5rem; }
+  .titre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--txt);
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .triline { display: flex; height: 1px; width: 100%; overflow: hidden; }
+  .triline div { flex: 1; transform: scaleX(0); transform-origin: left; }
+  .triline div:nth-child(1) { background: var(--fr-b); animation: grow 0.4s ease forwards 0.4s; }
+  .triline div:nth-child(2) { background: var(--fr-w); animation: grow 0.4s ease forwards 0.6s; }
+  .triline div:nth-child(3) { background: var(--fr-r); animation: grow 0.4s ease forwards 0.8s; }
+  @keyframes grow { to { transform: scaleX(1); } }
+
+  .section-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: var(--txt);
+  margin: 4rem 0 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--dim);
+}
+
+.cv-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d8d8d4;
+  border: 1px solid var(--dim);
+  padding: 0.5rem 1.5rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+.cv-btn:hover { border-color: #d8d8d4; color: var(--txt); }
+
+  .gpa {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--fr-w);
+  border: 1px solid var(--dim);
+  padding: 0.2rem 0.7rem;
+}
+
+  .timeline { display: flex; flex-direction: column; }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--dim);
+  }
+  .tl-left { display: flex; flex-direction: column; gap: 0.3rem; padding-top: 0.2rem; }
+  .tl-date { font-size: 0.78rem; color: var(--sub); letter-spacing: 0.06em; }
+  .tl-lieu { font-size: 0.75rem; color: #a0a09a; font-style: italic; }
+  .tl-titre {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--txt);
+  margin-bottom: 0.5rem;
+}
+  .tl-desc { font-size: 0.9rem; color: #a0a09a; line-height: 1.8; }
+
+  .competences { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 1rem; }
+  .comp-bloc h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--txt);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  .comp-bloc p { font-size: 0.9rem; color: #a0a09a; line-height: 1.9; }
+</style>
